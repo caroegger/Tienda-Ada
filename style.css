@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+button {
+    border: 0;
+    border-radius: 5px;
+    padding: 1px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ESTILOS NAV Y HEADER */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1400px;
+    padding: 10px 20px;
+}
+
+.logo-ada {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.div-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-carrito {
+    font-size: 15px;
+    margin: 0;
+    background-color: transparent;
+}
+
+.boton-carrito > i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.header {
+    position: relative;
+}
+
+.img-banner {
+    width: 100%;
+}
+
+.overlay-banner {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* CONTENEDOR PPAL */
+
+.contenedor-principal {
+    display: flex;
+    margin-top: 80px;
+}
+
+/* ASIDE */
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;  
+}
+
+.boton-limpiar-filtros {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+.contenedor-filtro {
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenedor-titulo-filtros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elemento-aside {
+    width: 100px;
+    height: 80px;
+    margin: 5px;
+}
+
+.input-busqueda {
+    background-color: transparent;
+    line-height: 40px;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    height: 40px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.fas.fa-search {
+    position: relative;
+    left: 170px;
+    bottom: 25px;
+    font-size: 18px;
+}
+
+.fas.fa-star {
+    color: #ffe139;
+}
+
+/* CONTENEDOR SECUNDARIO CON LAS TARJETAS DE PRODUCTO */
+    /* BARRA OPCIONES */
+
+.contenedor-secundario {
+    width: 85vw;
+}
+
+.barra-opciones {
+    background-color: #ffffff;
+    margin: 0 10px 10px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-ver-como {
+    display: flex;
+}
+
+.boton-vista {
+    background-color: transparent;
+    margin-top: 0;
+}
+
+.boton-vista > i {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+    /* FIN BARRA OPCIONES, ARRANCAN PRODUCTOS */
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto-tienda {
+    margin: 5px;
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    width: 270px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    margin: 10px;
+    padding: 30px 25px;
+    flex-grow: 1; 
+    transition: box-shadow 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caracteristicas-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-tienda:hover {
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);;
+}
+
+.contenedor-imagen-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    overflow: hidden;
+}
+
+.imagen-producto {
+    width: auto;
+    height: 100%;
+    transition: 0.8s;
+}
+
+.imagen-producto:hover {
+    transform: scale(1.5);
+}
+
+/* FOOTER */
+
+.footer {
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 40px 10px 30px;
+    margin-top: 80px;
+    font-size: 14px;
+}
