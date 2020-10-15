@@ -17,7 +17,7 @@
             <p>ADA SHOP</p>
         </div>
         <div class="div-nav">
-            <button class="boton-carrito">
+            <button class="boton-carrito" id="abrir-carrito">
                 <i class="fas fa-shopping-cart"></i> Carrito (0 items)
             </button>
         </div>
@@ -26,8 +26,8 @@
     <!-- ARRANCA HEADER -->
 
     <header class="header">
-        <h1>ELECTRÓNICA</h1>
         <img src="./Imagenes/banner-cortado.jpg" class="img-banner">
+        <h1 class="titulo-banner">ELECTRÓNICA</h1>
         <div class="overlay-banner"></div>
     </header>
 
@@ -148,7 +148,6 @@
             <!-- FIN BARRA OPCIONES -->
             <!-- ARRANCAN PRODUCTOS -->
             <div class="contenedor-tarjetas">
-                <!-- ACA MALE RESOLVERIA LAS TARJETAS DE ESTA MANERA: HACER UN ARTICLE POR CADA TARJETA, CON DOS DIVS ADENTRO, UNO PARA LA IMAGEN Y OTRO PARA LAS DEMAS COSAS. AL DIV DE LA IMAGEN DARLE LA FORMA APORPIADA PARA QUE PUEDA CONTENER LA IMAGEN SIN QUE SE DESCUAJERINGUE, VER -->
                 <article class="producto-tienda">
                     <div class="contenedor-imagen-producto">
                         <img class="imagen-producto" src="./Imagenes/xiaomi.jpg" class="imagen-producto">
@@ -373,5 +372,26 @@
         <img class="logo-ada" src="./Imagenes/iso_ADA.svg">
             <p class="gracias-footer">ADA SHOP - Gracias por visitarnos</p>
     </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- INICIO MENU LATERAL DESPLEGABLE -->
+    <div class="overlay ocultar" id="overlay">
+        <div class="carrito-desplegable" id="carrito">
+            <div>
+                <h1>Carrito</h1>
+                <button id="cerrar-carrito">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div>
+                <p>No tienes productos en el carrito, ¡Agrega algunos!</p>
+            </div>
+            <!-- <div>
+                <button>COMPRAR</button>
+                <button>VACIAR</button>
+            </div> -->
+        </div>
+    </div>
+<script src="index.js"></script>
 </body>
 </html>
