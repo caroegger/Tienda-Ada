@@ -374,24 +374,91 @@
     </footer>
     <!-- FIN FOOTER -->
 
-    <!-- INICIO MENU LATERAL DESPLEGABLE -->
-    <div class="overlay ocultar" id="overlay">
+    <!-- INICIO CARRITO LATERAL DESPLEGABLE -->
+    <div class="overlay-carrito ocultar" id="overlay-carrito">
         <div class="carrito-desplegable" id="carrito">
-            <div>
+            <div class="contenedor-titulo-carrito">
                 <h1>Carrito</h1>
-                <button id="cerrar-carrito">
+                <button class="boton-cerrar-carrito"                id="cerrar-carrito">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <div>
-                <p>No tienes productos en el carrito, ¡Agrega algunos!</p>
+            <div class="info-compra">
+                <div>
+                    <p id="contador-productos"></p>
+                    <div id="productos-carrito"></div>
+                </div>
+                <div>
+                    <p>Subtotal $<span id="subtotal"></span></p>
+                    <button class="boton-compra" id="boton-compra">COMPRAR</button>
+                    <button class="boton-vaciar" id="boton-vaciar">VACIAR</button>
+                </div>
             </div>
-            <!-- <div>
-                <button>COMPRAR</button>
-                <button>VACIAR</button>
-            </div> -->
         </div>
     </div>
+    <!-- FIN CARRITO LATERAL DESPLEGABLE -->
+    <!-- INICIO CHECKOUT -->
+    <div class="overlay-checkout ocultar" id="overlay-checkout">
+        <div class="contenedor-checkout ocultar" id="checkout">
+            <form id="menu-checkout">
+                <div class="contenedor-info-checkout">
+                    <div class="contenedor-datos">
+                        <div class="datos-personales">
+                            <h3 class="titulo-datos-personales">Datos personales</h3>
+                            <label for="nombre-usuario">Nombre y Apellido*
+                                <input type="text" id="nombre-usuario" placeholder="Por ej.: Malena Rey" required/>
+                            </label>
+                            <label  for="email-usuario">Email*
+                                <input type="email" id="email-usuario" placeholder="Por ej.: malenarey@gmail.com" required/>
+                            </label>
+                        </div>
+                        <div class="opciones-pago">
+                            <h3 class="titulo-opciones-de-pago">Opciones de pago</h3>
+                            <label for="radio-pago">
+                                <input type="radio" id="radio-pago" value="efectivo/debito" name="radio-pago">Efectivo/Débito
+                            </label>
+                            <label for="radio-pago">
+                                <input type="radio" id="radio-pago"
+                                value="tarjeta-de-credito" name="radio-pago">Tarjeta de Crédito
+                            </label>
+                            <label for="checkbox-pago">
+                                <input type="checkbox" id="checkbox-pago" value="requiere envio" name="envio"> Necesito Envío
+                            </label>
+                            <label for="checkbox-pago">
+                                <input type="checkbox" id="checkbox-pago" value="con descuento" name="descuento">Tengo Tarjeta de Descuento
+                            </label>
+                        </div>
+                    </div>
+                    <div class="contenedor-resumen">
+                        <h3>Resumen</h3>
+                        <div>
+                            <p class="subtotal-resumen">Subtotal: $<span id="subtotal-checkout"></span></p>
+                            <h2 class="total-resumen">Total: $<span></span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirmacion-compra">
+                    <button type="button" id="seguir-comprando">SEGUIR COMPRANDO</button>
+                    <label for="finalizar-compra">
+                        <input type="submit" value="FINALIZAR" id="finalizar-compra"/>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="overlay-vaciar ocultar" id="overlay-vaciar">
+            <div id="modal-vaciar" class="vaciar-contenedor ocultar">
+                <article class="vaciar-carrito">
+                    <p>Estás por vaciar el carrito, ¿querés continuar?</p>
+                    <div class="contenedor-botones-vaciar">
+                        <button id="cancelar-vaciar">CANCELAR</button>
+                        <button id="vaciar">VACIAR</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- FIN CHECKOUT -->
+
 <script src="index.js"></script>
 </body>
 </html>
