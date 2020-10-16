@@ -453,14 +453,10 @@ button {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
-    position: absolute;
-    top:0;
-    z-index: 4;
+    
 }
 
 .vaciar-carrito {
-    width: 25%;
-    height: 22%;
     background-color: #ffffff;
     border-radius: 5px;
     padding: 60px 40px;
@@ -469,6 +465,12 @@ button {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-right: -400px;
+    margin-top: -150px;
+    z-index: 4;
 }
 
 .vaciar-carrito > p {
@@ -481,6 +483,7 @@ button {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 #cancelar-vaciar {
