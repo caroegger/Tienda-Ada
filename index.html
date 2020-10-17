@@ -35,10 +35,11 @@
 
     <div class="contenedor-principal">
         <!-- EMPIEZA ASIDE -->
-        <aside class="aside">
+        <aside class="aside" id="aside"
             <!-- PRIMER ELEMENTO ASIDE - TITULO + LIMPIAR -->
             <div class="contenedor-filtro">
                 <div class="contenedor-titulo-filtros">
+                    <button class="cerrar-filtros-query"><i id="cerrar-filtros-query" class="fas fa-times"></i></button>
                     <h2>FILTROS</h2>
                     <button type="button" class="boton-limpiar-filtros" id="boton-limpiar-filtros">
                         <i class="fas fa-trash-alt"></i>Limpiar
@@ -56,7 +57,7 @@
                 </div>
                 <!-- TERCER ELEMENTO ASIDE - CATEGORIAS -->
                 <div class="contenedor-filtro">
-                    <h3>CATEGORÍAs</h3>
+                    <h3>CATEGORÍAS</h3>
                     <label for="consolas">
                         <input class="filtro-categoria" type="checkbox" id="consolas" name="categoria" value="consolas"/> 
                         CONSOLAS
@@ -135,19 +136,22 @@
         <section class="contenedor-secundario">
             <div class="barra-opciones">
                 <p class="cantidad-productos">Mostrando <span id="productos-mostrandose">12</span> producto(s) de 12</p>
+                <button class="boton-filtros-query ocultar"><i
+                    class="fas fa-filter"></i>
+                  Filtros</button>
                 <div class="contenedor-ver-como">
                     <p>Ver como</p>
-                    <button type="button" class="boton-vista">
+                    <button type="button" class="boton-vista" id="boton-grilla">
                         <i class="fas fa-th"></i>
                     </button>
-                    <button type="button" class="boton-vista">
+                    <button type="button" class="boton-vista" id="boton-lista">
                         <i class="fas fa-list"></i>
                     </button>
                 </div>
             </div>
             <!-- FIN BARRA OPCIONES -->
             <!-- ARRANCAN PRODUCTOS -->
-            <div class="contenedor-tarjetas">
+            <div class="contenedor-tarjetas" id="contenedor-tarjetas">
                 <article class="tarjeta" data-nombre="celular xiaomi" data-categoria="celulares"
                 data-puntaje="3" data-precio="22499" id="producto-tienda">
                     <div class="contenedor-imagen-producto">

@@ -27,6 +27,11 @@ button {
     overflow: hidden;
 }
 
+.desplegar {
+    transform: translateX(0%);
+}
+
+
 /* ESTILOS NAV Y HEADER */
 
 .nav {
@@ -34,7 +39,6 @@ button {
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    max-width: 1400px;
     padding: 10px 20px;
 }
 
@@ -96,13 +100,17 @@ button {
 
 /* ASIDE */
 
-.aside {
+#aside {
     display: flex;
     flex-direction: column;
     max-width: 270px;
     width: 100%;
     font-size: 12px;
     font-weight: 600;  
+}
+
+.cerrar-filtros-query {
+    display: none;
 }
 
 .boton-limpiar-filtros {
@@ -514,3 +522,123 @@ button {
 }
 
 /* GRILLA O LISTA */
+.vista-lista {
+    flex-direction: column;
+}
+.vista-grilla {
+    display: flex;
+    width: 100%;
+}
+
+
+/* MEDIA QUERY */
+
+/* // Extra small devices (portrait phones, less than 576px)
+*/
+@media (max-width: 575.98px) {
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aside {
+        height: 100vh;
+        max-width: 270px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        transform: translateX(100%);
+        background-color: #ffffff;
+        margin: 0%;
+    }
+
+    .contenedor-ver-como {
+        display: none;
+    }
+
+    .boton-filtros-query {
+        display: flex;
+    }
+
+    .filtros-query {
+        display: inline-block;
+        background-color: transparent;
+      }
+
+    .mostrar-filtros-query {
+        transform: translateX(0%);
+      }
+
+    .cerrar-filtros-query {
+        display: inline-block;
+        background-color: transparent;
+        text-align: right;
+    }
+} 
+
+/* // Small devices (landscape phones, 576px and up)
+*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aside {
+        height: 100vh;
+        max-width: 270px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        transform: translateX(100%);
+        background-color: #ffffff;
+        margin: 0%;
+    }
+
+    .contenedor-ver-como {
+        display: none;
+    }
+
+    .boton-filtros-query {
+        display: flex;
+    }
+
+    .filtros-query {
+        display: inline-block;
+        background-color: transparent;
+      }
+
+    .mostrar-filtros-query {
+        transform: translateX(0%);
+      }
+
+    .cerrar-filtros-query {
+        display: inline-block;
+        background-color: transparent;
+        text-align: right;
+    }
+} 
+
+/* // Medium devices (tablets, 768px and up)
+*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+} 
+
+/* // Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+} 
+
+/* // Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1200px) {
+    
+} 
