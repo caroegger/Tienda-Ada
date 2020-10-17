@@ -141,9 +141,9 @@ button {
 }
 
 .fas.fa-search {
-    position: absolute;
-    left: 200px;
-    bottom: 70px;
+    position: relative;
+    left: 170px;
+    bottom: 30px;
     font-size: 18px;
 }
 
