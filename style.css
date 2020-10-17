@@ -188,7 +188,7 @@ button {
     flex-wrap: wrap;
 }
 
-.producto-tienda {
+.tarjeta {
     margin: 5px;
     flex: 1 1 300px;
     background-color: #ffffff;
@@ -211,7 +211,7 @@ button {
     align-items: center;
 }
 
-.producto-tienda:hover {
+.tarjeta:hover {
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);;
 }
 
@@ -351,8 +351,6 @@ button {
     z-index: 3;
 }
 
-
-
 .datos-personales, .opciones-pago {
     display: flex;
     flex-direction: column;
@@ -440,6 +438,8 @@ button {
     background-color: #13c519d7;
 }
 
+/* MODAL VACIAR */
+
 .overlay-vaciar {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -512,3 +512,5 @@ button {
 #vaciar:hover {
     background-color: #b41313;
 }
+
+/* GRILLA O LISTA */
