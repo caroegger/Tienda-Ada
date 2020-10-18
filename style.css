@@ -27,10 +27,6 @@ button {
     overflow: hidden;
 }
 
-.desplegar {
-    transform: translateX(0%);
-}
-
 
 /* ESTILOS NAV Y HEADER */
 
@@ -159,6 +155,10 @@ button {
     color: #ffe139;
 }
 
+.contenedor-estrellas {
+    display: flex;
+}
+
 /* CONTENEDOR SECUNDARIO CON LAS TARJETAS DE PRODUCTO */
     /* BARRA OPCIONES */
 
@@ -268,6 +268,16 @@ button {
     right: 0;
     top: 0;
     z-index: 2;
+}
+
+.producto-carrito {
+    display: block;
+    width: 30%;
+}
+
+.imagen-carrito {
+    display: block;
+    width: 30%;
 }
 
 .overlay-carrito{
