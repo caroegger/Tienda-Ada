@@ -150,6 +150,10 @@ button {
     display: flex;
 }
 
+.boton-limpiar-filtros > i {
+    margin-right: 15px;
+}
+
 /* CONTENEDOR SECUNDARIO CON LAS TARJETAS DE PRODUCTO */
     /* BARRA OPCIONES */
 
@@ -247,6 +251,15 @@ button {
 }
 
 /* CARRITO DESPLEGABLE */
+.overlay-carrito{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
 .contenedor-carrito {
     display: flex;
     flex-direction: column;
@@ -270,24 +283,23 @@ button {
     height: 5%;
 }
 
-.cantidad-de-productos {
+.boton-cerrar-carrito {
+    font-size: 20px;
+    cursor: pointer;
+}
 
+.cantidad-productos-carrito, .subtotal{
+    margin-bottom: 30px;
 }
 
 .contenedor-tarjetas-producto {
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 .producto-carrito {
     display: flex;
-}
-
-//////////////////////////////////////
-
-.producto-carrito {
-    display: block;
-    width: 30%;
 }
 
 .imagen-carrito {
@@ -295,27 +307,7 @@ button {
     width: 30%;
 }
 
-.overlay-carrito{
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-}
 
-.boton-cerrar-carrito {
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.info-compra {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 95%;
-    margin-bottom: 20px;
-}
 
 .boton-compra {
     width: 100%;
@@ -325,7 +317,6 @@ button {
     border-radius: 5px;
     color: white;
     margin-top: 10px;
-    transition: .3s;
 }
 
 .boton-vaciar {
@@ -335,6 +326,7 @@ button {
     border: 1px solid #b41313;
     border-radius: 5px;
     color: #b41313;
+    margin-top: 20px;
 }
 
 .boton-compra:hover {
