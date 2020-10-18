@@ -21,10 +21,7 @@ const botonLista = document.getElementById("boton-lista")
 const descripcionProducto = document.querySelectorAll(".descripcion-producto")
 
 //FILTROS BUSQUEDA
-const tarjetas = document.getElementsByClassName("tarjeta")
-const filtroBusqueda = document.querySelector("#barra-busqueda")
-const filtroCategoria = document.getElementsByClassName("filtro-categoria")
-const filtroPuntaje = document.getElementsByClassName("filtro-puntaje")
+
 
 //MEDIA QUERY
 const botonFiltrosQuery = document.querySelector(".boton-filtros-query")
@@ -48,18 +45,20 @@ botonCerrarCarrito.onclick = () => {
 //ABRIR Y CERRAR CHECKOUT
 botonAbrirCheckout.onclick = () => {
     overlayCheckout.classList.remove("ocultar")
-    document.body.classList.add("no-scroll");
+    checkout.classList.remove("ocultar")
+    document.body.classList.add("no-scroll")
 }
 botonSalirCheckout.onclick = () => {
     overlayCheckout.classList.add("ocultar")
-    document.body.classList.remove("no-scroll");
+    checkout.classList.add("ocultar")
+    document.body.classList.remove("no-scroll")
 }
 
 //VACIAR CARRITO
 abrirModalVaciar.onclick = () => {
     modalVaciar.classList.remove("ocultar")
     overlayVaciar.classList.remove("ocultar")
-    document.body.classList.add("no-scroll");
+    document.body.classList.add("no-scroll")
 }
 cancelarVaciar.onclick = () => {
     modalVaciar.classList.add("ocultar")
@@ -79,31 +78,34 @@ botonGrilla.onclick = () => {
 }
 
 //FILTROS BUSQUEDA
+const tarjetas = document.getElementsByClassName("tarjeta")
+const filtroBusqueda = document.querySelector("#barra-busqueda")
+const filtroCategoria = document.getElementsByClassName("filtro-categoria")
+const filtroPuntaje = document.getElementsByClassName("filtro-puntaje")
+
+
+
+
 filtroBusqueda.oninput = () => {
-    console.log("input")
     filtrarTarjetas()
 }
 
 for (let checkbox of filtroCategoria) {
     checkbox.oninput = () => {
-        console.log("checkboxCategoriaChequeado")
         filtrarTarjetas()
     }
 }
 
 for (let checkbox of filtroPuntaje) {
     checkbox.oninput = () => {
-        console.log("checkboxPuntajeChequeado")
         filtrarTarjetas()
     }
 }
 
 const filtrarTarjetas = () => {
     for (let tarjeta of tarjetas) {
-        console.log("funca")
         if (pasaFiltros(tarjeta)) {
         mostrarTarjetas(tarjeta)
-        console.log("mostrar tarjeta")
         } else {
         ocultarTarjetas(tarjeta)
         }
@@ -117,8 +119,8 @@ const hayAlgoEscritoEnBusqueda = () => {
 
 const coincideBusquedaConTarjeta = (tarjeta) => {
     const nombreTarjeta = tarjeta.dataset.busqueda.toLowerCase()
-    const busqueda = filtroBusqueda.value.toLowerCase()
-    if (nombreTarjeta.includes(busqueda)) {
+    const busquedaTarjeta = filtroBusqueda.value.toLowerCase()
+    if (nombreTarjeta.includes(busquedaTarjeta)) {
       return true
     } else {
       return false
@@ -192,7 +194,6 @@ const pasaFiltros = (tarjeta) => {
         pasaFiltroCategoria(tarjeta) == true &&
         pasaFiltroPuntaje(tarjeta) == true
     ) {
-        console.log("funca pasa filtros")
         return true
     } else {
         return false
