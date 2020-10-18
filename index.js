@@ -30,6 +30,7 @@ const filtroPuntaje = document.getElementsByClassName("filtro-puntaje")
 const limpiar = document.querySelector(".boton-limpiar-filtros")
 
 
+
 //MEDIA QUERY
 const botonFiltrosQuery = document.querySelector(".boton-filtros-query")
 const filtrosMQuery = document.querySelector("#aside")
