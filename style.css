@@ -158,13 +158,18 @@ button {
     /* BARRA OPCIONES */
 
 .contenedor-secundario {
-    width: 85vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 800px;
 }
 
 .barra-opciones {
-    background-color: #ffffff;
-    margin: 0 10px 10px;
-    padding: 25px 30px;
+    background-color: #fafafa;
+    height: 65px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,28 +179,21 @@ button {
     display: flex;
 }
 
-.boton-vista {
-    background-color: transparent;
-    margin-top: 0;
-}
-
-.boton-vista > i {
-    font-size: 20px;
-    margin-left: 15px;
-}
-
     /* FIN BARRA OPCIONES, ARRANCAN PRODUCTOS */
 
 .contenedor-tarjetas {
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 20;
 }
 
 .tarjeta {
     margin: 5px;
-    flex: 1 1 300px;
+    flex: 1 1 200px;
     background-color: #ffffff;
-    width: 270px;
+    width: 271px;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     margin: 10px;
     padding: 30px 25px;
@@ -215,7 +213,7 @@ button {
 }
 
 .tarjeta:hover {
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
 }
 
 .contenedor-imagen-producto {
@@ -251,6 +249,7 @@ button {
 }
 
 /* CARRITO DESPLEGABLE */
+
 .overlay-carrito{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -320,8 +319,6 @@ button {
     width: 30%;
 }
 
-
-
 .boton-compra {
     width: 100%;
     background-color: #13c519;
@@ -359,7 +356,7 @@ button {
     height: 100vh;
     width: 700px;
     padding: 40px 30px;
-    background-color: #fafafa;
+    background-color: #ffffff;
     height: 100%;
     position: absolute;
     right: 0;
@@ -451,7 +448,6 @@ button {
     padding: 0 25px;
     border: none;
     border-radius: 5px;
-    color: #3e434b;
     margin-left: 30px;
     font-size: 14px;
     background-color: #13c519;
@@ -581,6 +577,11 @@ button {
         display: none;
     }
 
+    .fas.fa-list, .fas.fa-th {
+        background-color: transparent;
+        margin-right: 10px;
+    }
+
     .boton-filtros-query {
         display: flex;
     }
@@ -654,21 +655,3 @@ button {
 .no-scroll {
     overflow: hidden;
 }
-
-/* // Medium devices (tablets, 768px and up)
-*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-} 
-
-/* // Large devices (desktops, 992px and up)
-*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-} 
-
-/* // Extra large devices (large desktops, 1200px and up)
-*/
-@media (min-width: 1200px) {
-    
-} 

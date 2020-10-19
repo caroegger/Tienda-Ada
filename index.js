@@ -15,10 +15,10 @@ const modalVaciar = document.getElementById("modal-vaciar")
 const overlayVaciar = document.getElementById("overlay-vaciar")
 
 //GRILLA O LISTA
-const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
-const botonGrilla = document.getElementById("boton-grilla")
-const botonLista = document.getElementById("boton-lista")
-const descripcionProducto = document.querySelectorAll(".descripcion-producto")
+// const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
+// const botonGrilla = document.getElementById("boton-grilla")
+// const botonLista = document.getElementById("boton-lista")
+// const descripcionProducto = document.querySelectorAll(".descripcion-producto")
 
 //FILTROS BUSQUEDA
 const tarjetas = document.getElementsByClassName("tarjeta")
@@ -29,16 +29,7 @@ const filtroPuntaje = document.getElementsByClassName("filtro-puntaje")
 //LIMPIAR FILTROS
 const limpiar = document.querySelector(".boton-limpiar-filtros")
 
-
-
-//MEDIA QUERY
-const botonFiltrosQuery = document.querySelector(".boton-filtros-query")
-const filtrosMQuery = document.querySelector("#aside")
-
-
-
 //////////////////////////////////////////////////////////////////////
-
 
 //ABRIR Y CERRAR CARRITO
 botonAbrirCarrito.onclick = () => {
@@ -73,17 +64,6 @@ cancelarVaciar.onclick = () => {
     overlayVaciar.classList.add("ocultar")
 }
 
-// GRILLA O LISTA
-
-botonGrilla.onclick = () => {
-    contenedorTarjetas.classList.remove("vista-lista")
-    for (let tarjeta of tarjetas) {
-        tarjeta.classList.add("vista-grilla")
-    }
-    for (let descripcion of descripcionProducto) {
-        descripcion.classList.remove("ocultar")
-    }
-}
 
 //FILTROS BUSQUEDA
 filtroBusqueda.oninput = () => {
@@ -221,5 +201,3 @@ limpiar.onclick = () => {
         checkbox.checked = false
     }
 }
-
-//MEDIA QUERY
